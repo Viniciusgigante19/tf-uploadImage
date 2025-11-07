@@ -6,6 +6,7 @@ import UpdateProductController from '../app/Http/Controllers/Product/Api/UpdateP
 import GetProductController from '../app/Http/Controllers/Product/Api/GetProductController.js';
 import VerifyImage from '../app/Http/Middlewares/VerifyImage.js';
 import UploadPhotoController from '../app/Http/Controllers/Product/Api/UploadPhotoController.js';
+import getImageFromProduct from '../app/Http/Controllers/Product/Api/getImageFromProduct.js'
 
 export const apiProduct = (function () {
 
@@ -23,6 +24,9 @@ export const apiProduct = (function () {
 
     // Enviar imagem
     router.post('/:id/image', VerifyImage, UploadPhotoController);
+
+    // Retorna a imagem do produto especifico
+    router.get('/:id/getImage',getImageFromProduct)
 
     return router;
 

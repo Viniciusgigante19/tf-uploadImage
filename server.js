@@ -1,5 +1,6 @@
 import express from 'express';
 import chalk from 'chalk';
+import CorsMiddleware from './app/Http/Middlewares/CorsMiddleware.js';
 
 import "./bootstrap/app.js"
 import routes from "./routes/routes.js";
@@ -10,6 +11,9 @@ const app = express();
 
 /** Inicializar rotas  */
 app.use("/", routes);
+
+/* Cors Middleware */
+app.use(CorsMiddleware);
 
 initRelations();
 

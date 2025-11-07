@@ -3,6 +3,7 @@ import { ListApi, ProductModel } from "@app/js/app.types";
 import { formatDate, formatPrice } from "@app/js/services/helpers";
 import productDeleteApi from "@app/js/services/api/productDeleteApi";
 import { ProductListProps } from "./ProductList.types";
+import uploadImage from 'resources/js/services/api/uploadImageApi'
 import Button from "../Button/Button";
 import { ButtonRef } from "../Button/Button.types";
 

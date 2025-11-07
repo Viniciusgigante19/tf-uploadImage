@@ -462,3 +462,6 @@ app-network
 | NGINX       | 80             | **8080**       | http://localhost:8080               |
 | PostgreSQL  | 5432           | **6789**       | usado por clients (beekeeper, dbeaver, ...)/ORM/CLI               |
 | Node Vite HMR    | 5173    | **5173** | http://localhost:5173  |
+
+
+docker exec -it unifaat-frontend-project-postgres-container-1 psql -U aluno -d unifaat
